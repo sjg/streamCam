@@ -15,6 +15,8 @@ Simply, when a client connects to the Camera Server, the Raspberry Pi starts tak
 
 ### Install Modules
 - sudo npm install -g forever
+- cd streamCam && npm install && ../
+- cd streamCam-server && npm install && ../
 
 ### Testing the Camera
 - sudo chmod 777 /dev/vchiq
