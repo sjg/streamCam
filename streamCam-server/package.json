@@ -1,0 +1,21 @@
+{
+  "name": "streamCam-server",
+  "version": "1.0.0",
+  "description": "The server for streamCam - Archives images and creates timelapses for the project",
+  "main": "getSocketImage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "streamCam",
+    "websockets"
+  ],
+  "dependencies" :{
+    "request" : "latest",
+    "socket.io-client": "latest",
+    "xdate": "latest"
+  },
+  "author": "Steven Gray",
+  "license": "Apache"
+}

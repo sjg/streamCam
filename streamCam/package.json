@@ -1,0 +1,26 @@
+{
+  "name": "streamCam",
+  "version": "1.0.0",
+  "description": "A WebSocket streaming webcam for Raspberry Pi + Camera",
+  "main": "streamServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/sjg/streamCam"
+  },
+  "dependencies" :{
+    "express" : "latest",
+    "socket.io": "latest"
+  },
+  "keywords": [
+    "webcam",
+    "stream",
+    "streamCam",
+    "websockets",
+    "camera"
+  ],
+  "author": "Steven Gray",
+  "license": "Apache"
+}
