@@ -10,25 +10,25 @@ Simply, when a client connects to the Camera Server, the Raspberry Pi starts tak
 ##  Clean install on a fresh Raspberry Pi
 
 ### Install Latest version of Node
-wget http://node-arm.herokuapp.com/node_latest_armhf.deb
-sudo dpkg -i node_latest_armhf.deb
+- wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+- sudo dpkg -i node_latest_armhf.deb
 
 ### Install Modules
-sudo npm install -g forever
+- sudo npm install -g forever
 
 ### Testing the Camera
-sudo chmod 777 /dev/vchiq
-/usr/bin/raspistill -w 1920 -h 1080 -n -t 1 -o ./image_stream.jpg
+- sudo chmod 777 /dev/vchiq
+- /usr/bin/raspistill -w 1920 -h 1080 -n -t 1 -o ./image_stream.jpg
 
 ### Running the Camera Server
-node --expose-gc streamCam/streamServer.js
+- node --expose-gc streamCam/streamServer.js
 
 ### Running Camera Server at boot - Add to /etc/rc.local
-sudo chmod 777 /dev/vchiq
-su - USERNAME -c "NODE_ENV=production /usr/local/bin/forever start -c "/usr/local/bin/node --expose-gc" /path/to/streamCam/streamServer.js
+- sudo chmod 777 /dev/vchiq
+- su - USERNAME -c "NODE_ENV=production /usr/local/bin/forever start -c "/usr/local/bin/node --expose-gc" /path/to/streamCam/streamServer.js
 
 ### Running the Archive Server
-node streamCam-server/getSocketImage.js
+- node streamCam-server/getSocketImage.js
 
 ## Create Timelapse
 In the streamCam-server folder there are scripts which can be run with crontab that create the timelapses for the project and post a automatic tweet of the last image taken.
